@@ -12,4 +12,4 @@ using ObjectInitializers;
 //secondReadonlyPoint.DisplayStats();
 
 Test test = new Test();
-Console.WriteLine(test.i);
+Console.WriteLine(Test.j);

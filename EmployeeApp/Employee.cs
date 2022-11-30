@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeApp
 {
-    internal partial class Employee
+    internal abstract partial class Employee
     {
         //Constructors
         public Employee() { }
@@ -15,8 +15,7 @@ namespace EmployeeApp
         : this(name, 0, id, pay, empSsn, EmployeePayTypeEnum.Salaried)
         { }
 
-        public Employee(string name, int age, int id,
-            float pay, string empSsn, EmployeePayTypeEnum payType)
+        public Employee(string name, int age, int id, float pay, string empSsn, EmployeePayTypeEnum payType)
         {
             Name = name;
             Id = id;
@@ -27,26 +26,46 @@ namespace EmployeeApp
         }
 
         //Methods
-        public void GiveBonus(float amount)
+        public virtual void GiveBonus(float amount)
         {
-            Pay = this switch
-            {
-                { Age: >= 18, PayType: EmployeePayTypeEnum.Commission, HireDate.Year: > 2020 }
-                => Pay += .10F * amount,
-                { Age: >= 18, PayType: EmployeePayTypeEnum.Hourly, HireDate.Year: > 2020 }
-                => Pay += 40F * amount / 2080F,
-                { Age: >= 18, PayType: EmployeePayTypeEnum.Salaried, HireDate.Year: > 2020 }
-                => Pay += amount,
-                _ => Pay += 0
-            };
+            Pay += amount;
+            //Pay = this switch
+            //{
+            //    { Age: >= 18, PayType: EmployeePayTypeEnum.Commission, HireDate.Year: > 2020 }
+            //    => Pay += .10F * amount,
+            //    { Age: >= 18, PayType: EmployeePayTypeEnum.Hourly, HireDate.Year: > 2020 }
+            //    => Pay += 40F * amount / 2080F,
+            //    { Age: >= 18, PayType: EmployeePayTypeEnum.Salaried, HireDate.Year: > 2020 }
+            //    => Pay += amount,
+            //    _ => Pay += 0
+            //};
         }
-        public void DisplayStats()
-        {
-            Console.WriteLine("Name: {0}", _empName);
-            Console.WriteLine("ID: {0}", _empId);
-            Console.WriteLine($"ID: {_empId}");
-            Console.WriteLine($"Pay: {_currPay}");
-        }
+        public double GetBenefitsCost() => EmpBenefits.ComputePayDeduction();
 
+        public BenefitPackage Benefits
+        {
+            get => EmpBenefits;
+            set => EmpBenefits = value;
+        }
+        public virtual void DisplayStats()
+        {
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"ID: {Id}");
+            Console.WriteLine($"Age: {Age}");
+            Console.WriteLine($"Pay: {Pay}");
+            Console.WriteLine($"SSN: {SocialSecurityNumber}");
+        }
+        //Nested Types
+        internal class BenefitPackage
+        {
+            enum BenefitPackageLevel
+            {
+                //
+            }
+            public double ComputePayDeduction()
+            {
+                return 125.0;
+            }
+        }
     }
 }

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObjectInitializers
+namespace BasicInheritance
 {
-    internal class Test
+    internal sealed class MiniVan : Car
     {
-        public readonly int i=7;
-        public const int j = 8;
+          
     }
 }

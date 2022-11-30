@@ -25,6 +25,5 @@ namespace RecordsDemo
         {
             return $"Car Details:\n------------\nMake: {Make}\nModel: {Model}\nColor: {Color}\n===============\n";
         }
-
     }
 }
