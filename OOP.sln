@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleException", "SimpleEx
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomException", "CustomException\CustomException.csproj", "{DF0C87A5-69AA-405F-AAFA-72B4A6959F1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessMultipleExceptions", "ProcessMultipleExceptions\ProcessMultipleExceptions.csproj", "{BE542C0B-923A-49E2-96E1-AE1402E3A904}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DF0C87A5-69AA-405F-AAFA-72B4A6959F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF0C87A5-69AA-405F-AAFA-72B4A6959F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF0C87A5-69AA-405F-AAFA-72B4A6959F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE542C0B-923A-49E2-96E1-AE1402E3A904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE542C0B-923A-49E2-96E1-AE1402E3A904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE542C0B-923A-49E2-96E1-AE1402E3A904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE542C0B-923A-49E2-96E1-AE1402E3A904}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
