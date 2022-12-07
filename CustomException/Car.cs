@@ -1,11 +1,6 @@
 ﻿using CustomException;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SimpleException
+namespace CustomException
 {
     internal class Car
     {
@@ -45,9 +40,7 @@ namespace SimpleException
                     CurrentSpeed = 0;
                     _carIsDead = true;
                     // Use the "throw" keyword to raise an exception.
-                    throw new CarIsDeadException(
-                        $"{PetName} has overheated!",
-                        "You have a lead foot", DateTime.Now)
+                    throw new CarIsDeadException("You have a lead foot", DateTime.Now, $"{PetName} has overheated!")
                     {
                         HelpLink = "http://www.CarsRUs.com",
                     };
