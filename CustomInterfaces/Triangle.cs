@@ -9,13 +9,17 @@ namespace CustomInterfaces
 {
     class Triangle : Shape, IPointy
     {
+        //Properties
+        public byte Points => 3;
+        //Constructors
         public Triangle() { }
         public Triangle(string name) : base(name) { }
+        //Methods
         public override void Draw()
         {
             Console.WriteLine("Drawing {0} the Triangle", PetName);
         }
         
-        public byte Points => 3;
+        
     }
 }

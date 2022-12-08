@@ -1,8 +1,24 @@
 ﻿using CustomInterfaces;
+using System.Reflection.Metadata;
 
-CloneableExample();
 
-static void CloneableExample()
+
+/*Console.WriteLine($"Example property: {IRegularPointy.ExampleProperty}");
+IRegularPointy.ExampleProperty = "Updated";
+Console.WriteLine($"Example property: {IRegularPointy.ExampleProperty}");
+*/
+
+/*var sq = new Square("Boxy"){ SideLength = 4 };
+sq.Draw();
+Console.WriteLine($"{sq.PetName} has {sq.NumberOfSides} of length {sq.SideLength} and a perimeter of { ((IRegularPointy)sq).Perimeter}");
+*/
+
+/*Hexagon hex = new Hexagon();
+Console.WriteLine("Points: {0}", hex.Points);
+Console.ReadLine();
+*/
+
+/*static void CloneableExample()
 {
     // All of these classes support the ICloneable interface.
     string myStr = "Hello";
@@ -17,3 +33,4 @@ static void CloneableExample()
         Console.WriteLine("Your clone is a: {0}", theClone.GetType().Name);
     }
 }
+*/
