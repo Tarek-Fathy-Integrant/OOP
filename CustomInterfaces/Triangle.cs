@@ -15,11 +15,7 @@ namespace CustomInterfaces
         {
             Console.WriteLine("Drawing {0} the Triangle", PetName);
         }
-        // IPointy implementation.
-        //public byte Points
-        //{
-        // get { return 3; }
-        //}
+        
         public byte Points => 3;
     }
 }
